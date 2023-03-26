@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Shopping With JS</title>
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+</head>
+
+<body>
+    <section>
+        <div class="navbar bg-base-100 shadow-2xl lg:px-12">
+            <div class="flex-1">
+                <a class="btn btn-ghost normal-case text-xl">Interactive <br> Geometry Genius</a>
+            </div>
+            <div class="flex-none">
+                <button id="btn-blog" class="btn btn-accent">Blog</button>
+            </div>
+        </div>
+    </section>
+    <section class="lg:px-12 flex flex-col md:flex-row lg:flex-row">
+        <div class="products-cetails w-full md:w-[75%] lg:w-[75%] mt-5 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- first card -->
+            <div class="random">
+                <div id="hover" class="card card-compact w-full bg-base-100 shadow-xl gap-6">
+
+                    <img class=" w-full h-40" src="images/triangle.png" alt="Shoes">
+                    <h2 id="trianglename" class="text-center text-4xl">Triangle</h2>
+                    <h2 class="text-center">Area (A) =0.5&#215;b&#215;h</h2>
+                    <div class="flex justify-center ">
+                        <input class="w-16 bg-gray-400  " type="number" name="" id="triangle-b" placeholder="b">
+                        <h5>cm</h5>
+                        <input class="w-16 bg-gray-400 " type="number" name="" id="triangle-h" placeholder="h">
+                        <h5>cm</h5>
+
+                    </div>
+                    <button id="btn-Calculate" class="bg-sky-500 px-8 py-2 mt-3 rounded-xl"> Calculate</button>
+                </div>
+            </div>
+            <!-- second card -->
+            <div class="card card-compact w-full bg-base-100 shadow-xl gap-6 hover:bg-cyan-600  ">
+                <img class="w-full h-40" src="images/rectangle.png" alt="Shoes">
+                <h2 id="rectanglename" class="text-center text-4xl">Rectangle</h2>
+                <h2 class="text-center">Area (A) = w&#215;I</h2>
+                <div class="flex justify-center ">
+                    <input class="w-16 bg-gray-400 mb-2 " type="number" name="" id="rectangle-w" placeholder="w">
+                    <h5>cm</h5>
+                    <input class="w-16 bg-gray-400 mb-2 " type="number" name="" id="rectangle-l" placeholder="l">
+                    <h5>cm</h5>
+
+
+                </div>
+                <button id="btn-rectangle" class="bg-sky-500 px-8 py-2 mt-3 rounded-xl"> Calculate</button>
+            </div>
+            <!-- third card -->
+
+            <div class="card card-compact w-full bg-base-100 shadow-xl gap-6 hover:bg-green-600">
+                <img class="w-full h-40" src="images/parallelogram.png" alt="Shoes">
+                <h2 id="parallelogramname" class="text-center text-4xl">Parallelogram</h2>
+                <h2 class="text-center">Area (A) = b&#215;h</h2>
+                <div class="flex justify-center ">
+                    <input class="w-16 bg-gray-400" type="number" name="" id="parallelogram-b" placeholder="b">
+                    <h5>cm</h5>
+
+                    <input class="w-16 bg-gray-400 " type="text" name="number" id="parallelogram-h" placeholder="h">
+                    <h5>cm</h5>
+
+
+                </div>
+                <button id="btn-parallelogram" class="bg-sky-500 px-8 py-2 mt-3 rounded-xl"> Calculate</button>
+            </div>
+            <!-- four card -->
+
+            <div class="card card-compact w-full bg-base-100 shadow-xl gap-6 hover:bg-orange-300">
+                <img class="w-full h-40" src="images/rhombus.png" alt="Shoes">
+                <h2 id="rhombusname" class="text-center text-4xl">Rhombus</h2>
+                <h2 class="text-center">Area (A) =0.5&#215;d<sub>1</sub>&#215;d<sub>2</sub></h2>
+                <div class="flex justify-center ">
+                    <input class="w-16 bg-gray-400" type="number" name="" id="rhombus-d1" placeholder="b">
+                    <h5>cm</h5>
+                    <input class="w-16 bg-gray-400 " type="number" name="number" id="rhombus-d2" placeholder="b">
+                    <h5>cm</h5>
+                </div>
+                <button id="btn-rhombus" class="bg-sky-500 px-8 py-2 mt-3 rounded-xl"> Calculate</button>
+
+
+
+
+            </div>
+
+
+            <!-- five card -->
+            <div class="card card-compact w-full bg-base-100 shadow-xl gap-6 hover:bg-amber-400">
+                <div>
+                    <img class="w-full h-40" src="images/pentagon.png" alt="Shoes">
+                </div>
+                <h2 id="pentagonname" class="text-center text-4xl">Pentagon</h2>
+                <h2 class="text-center">Area (A) =0.5&#215;p&#215;b</h2>
+                <div class="flex justify-center">
+                    <input class="w-16 bg-gray-400" type="number" name="" id="pentagon-p" placeholder="p">
+                    <h5>cm</h5>
+                    <input class="w-16 bg-gray-400" type="number" name="" id="pentagon-b" placeholder="b">
+                    <h5>cm</h5>
+
+
+                </div>
+                <button id="btn-pentagon" class="bg-sky-500 px-8 py-2 mt-3 rounded-xl"> Calculate</button>
+            </div>
+            <!-- six card -->
+            <div class="card card-compact w-full bg-base-100 shadow-xl gap-6 hover:bg-teal-400">
+                <img class="w-full h-40" src="images/ellipse.png" alt="Shoes">
+                <h2 id="ellipsename" class="text-center text-4xl">Ellipse</h2>
+                <h2 class="text-center">Area (A) =&pi; &#215;a &#215;b</h2>
+                <div class="flex justify-center">
+                    <input class="w-16 bg-gray-400 " type="number" name="" id="ellipse-a" placeholder="a">
+                    <h5>cm</h5>
+                    <input class="w-16 bg-gray-400 " type="number" name="" id="ellipse-b" placeholder="b">
+                    <h5>cm</h5>
+
+
+                </div>
+                <button id="btn-ellipse" class="bg-sky-500 px-8 py-2 mt-3 rounded-xl"> Calculate</button>
+            </div>
+
+
+
+        </div>
+        <!-- cart details div  -->
+        <div class="cart-details w-full md:w-[40%] lg:w-[40%] mx-auto">
+            <h1 class="text-3xl text-center font-bold underline mt-5">
+                Area Calculation
+
+            </h1>
+            <div class="overflow-x-auto">
+                <table class="table w-full">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Name</th>
+                            <th>Area</th>
+                            <th>convert</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-container">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+
+
+
+    </section>
+
+    <script src="style.js"></script>
+    <script src="Blog.html"></script>
+
+</body>
+
+</html>
